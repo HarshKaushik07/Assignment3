@@ -1,0 +1,19 @@
+<!-- shop_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nearby Shops</title>
+  </head>
+  <body>
+    <h1>Nearby Shops</h1>
+    <ul>
+      {% for shop_data in shops %}
+      <li>
+        {{ shop_data.shop.name }} - Distance: {{
+        shop_data.distance|floatformat:2 }} km
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
